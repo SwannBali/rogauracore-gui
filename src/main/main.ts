@@ -151,34 +151,44 @@ app
 
     const data = store.get('dataStored') as string;
 
+    let parsedValue: StoredData | null = null;
+
     exec(`${ROGAURACORE_PATH} brightness 2`);
 
-    const jsonParse = JSON.parse(data);
+    if (data) {
+      try {
+        parsedValue = JSON.parse(data);
 
-    const storedData = jsonParse as StoredData;
+        const storedData = parsedValue as StoredData;
 
-    if (storedData && storedData.mode) {
-      if (storedData.mode === 'STATIC') {
-        exec(`${ROGAURACORE_PATH} single_static ${storedData.color}`);
+        if (storedData && storedData.mode) {
+          if (storedData.mode === 'STATIC') {
+            exec(`${ROGAURACORE_PATH} single_static ${storedData.color}`);
+          }
+
+          if (storedData.mode === 'RAINBOW') {
+            exec(`${ROGAURACORE_PATH} rainbow_cycle ${storedData.force}`);
+          }
+
+          if (storedData.mode === 'BRIGHTNESS') {
+            exec(`${ROGAURACORE_PATH} brightness ${storedData.force}`);
+          }
+
+          if (storedData.mode === 'OFF') {
+            exec(`${ROGAURACORE_PATH} single_static 000000`);
+          }
+
+          if (storedData.mode === 'MULTI_STATIC') {
+            exec(
+              `${ROGAURACORE_PATH} multi_static ${storedData.color1} ${storedData.color2} ${storedData.color3} ${storedData.color4}`,
+            );
+          }
+        }
+      } catch (error) {
+        console.error('Failed to parse JSON:', error);
       }
-
-      if (storedData.mode === 'RAINBOW') {
-        exec(`${ROGAURACORE_PATH} rainbow_cycle ${storedData.force}`);
-      }
-
-      if (storedData.mode === 'BRIGHTNESS') {
-        exec(`${ROGAURACORE_PATH} brightness ${storedData.force}`);
-      }
-
-      if (storedData.mode === 'OFF') {
-        exec(`${ROGAURACORE_PATH} single_static 000000`);
-      }
-
-      if (storedData.mode === 'MULTI_STATIC') {
-        exec(
-          `${ROGAURACORE_PATH} multi_static ${storedData.color1} ${storedData.color2} ${storedData.color3} ${storedData.color4}`,
-        );
-      }
+    } else {
+      console.warn('parsedValue is undefined or null');
     }
 
     const tray = new Tray(trayIconPath);
