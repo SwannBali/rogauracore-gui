@@ -60,7 +60,7 @@ function Hello() {
       );
 
       if (data) {
-        setStoredData(JSON.parse(data) as StoredData);
+        setStoredData((JSON.parse(data) as StoredData) ?? null);
       }
     };
 
