@@ -149,32 +149,36 @@ app
       ? path.join(process.resourcesPath, 'assets', 'icons', 'asus.png')
       : path.join(__dirname, '../../assets/icons/asus.png');
 
-    const data = store.get('dataStored');
+    const data = store.get('dataStored') as string;
 
     exec(`${ROGAURACORE_PATH} brightness 2`);
 
-    const storedData = JSON.parse(data as any) as StoredData;
+    const jsonParse = JSON.parse(data);
 
-    if (storedData.mode === 'STATIC') {
-      exec(`${ROGAURACORE_PATH} single_static ${storedData.color}`);
-    }
+    const storedData = jsonParse as StoredData;
 
-    if (storedData.mode === 'RAINBOW') {
-      exec(`${ROGAURACORE_PATH} rainbow_cycle ${storedData.force}`);
-    }
+    if (storedData && storedData.mode) {
+      if (storedData.mode === 'STATIC') {
+        exec(`${ROGAURACORE_PATH} single_static ${storedData.color}`);
+      }
 
-    if (storedData.mode === 'BRIGHTNESS') {
-      exec(`${ROGAURACORE_PATH} brightness ${storedData.force}`);
-    }
+      if (storedData.mode === 'RAINBOW') {
+        exec(`${ROGAURACORE_PATH} rainbow_cycle ${storedData.force}`);
+      }
 
-    if (storedData.mode === 'OFF') {
-      exec(`${ROGAURACORE_PATH} single_static 000000`);
-    }
+      if (storedData.mode === 'BRIGHTNESS') {
+        exec(`${ROGAURACORE_PATH} brightness ${storedData.force}`);
+      }
 
-    if (storedData.mode === 'MULTI_STATIC') {
-      exec(
-        `${ROGAURACORE_PATH} multi_static ${storedData.color1} ${storedData.color2} ${storedData.color3} ${storedData.color4}`,
-      );
+      if (storedData.mode === 'OFF') {
+        exec(`${ROGAURACORE_PATH} single_static 000000`);
+      }
+
+      if (storedData.mode === 'MULTI_STATIC') {
+        exec(
+          `${ROGAURACORE_PATH} multi_static ${storedData.color1} ${storedData.color2} ${storedData.color3} ${storedData.color4}`,
+        );
+      }
     }
 
     const tray = new Tray(trayIconPath);
