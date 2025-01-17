@@ -66,7 +66,7 @@ body {
   width: 1120px;
 }
 
-.key::after {
+/* .key::after {
   content: '';
   position: absolute;
   top: 50%;
@@ -76,7 +76,8 @@ body {
   aspect-ratio: 1 / 1;
   background-color: #161616;
   transform: translate(-50%, -50%);
-}
+  filter: none;
+} */
 
 .key {
   border: none;
@@ -89,14 +90,28 @@ body {
   height: 4rem;
 }
 
+.key::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 13px;
+    height: 3.8em;
+    aspect-ratio: 1 / 1;
+    background-color: #161616;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Assure que le pseudo-élément reste au-dessus */
+}
+
+
 .key-space::after {
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
-  border-radius: 16px;
-  height: 3.5rem;
-  width: calc(100% - 10px);
+  border-radius: 13px;
+  height: 3.8rem;
+  width: calc(100% - 5px);
   background-color: #000000;
   transform: translate(-50%, -50%);
 }
@@ -105,6 +120,21 @@ body {
   width: 100%;
 }
 
+.utility {
+  width: 100%;
+}
+
+.utility::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 13px;
+  height: 3.8rem;
+  width: calc(100% - 4px);
+  background-color: #000000;
+  transform: translate(-50%, -50%);
+}
 .key:hover .front {
   transform: translateY(-6px);
   transition:
@@ -131,54 +161,69 @@ body {
 }
 
 /* Gradient classes */
-.gradient-1 { background: linear-gradient(to right, var(--color1), var(--color2)); }
-.gradient-2 { background: linear-gradient(to right, var(--color2), var(--color3)); }
-.gradient-3 { background: linear-gradient(to right, var(--color3), var(--color4)); }
-.gradient-4 { background: linear-gradient(to right, var(--color4), var(--color1)); }
-.gradient-5 { background: linear-gradient(to right, var(--color1), var(--color2)); }
-.gradient-6 { background: linear-gradient(to right, var(--color2), var(--color3)); }
-.gradient-7 { background: linear-gradient(to right, var(--color3), var(--color4)); }
-.gradient-8 { background: linear-gradient(to right, var(--color4), var(--color1)); }
-.gradient-9 { background: linear-gradient(to right, var(--color1), var(--color2)); }
-.gradient-10 { background: linear-gradient(to right, var(--color2), var(--color3)); }
-.gradient-11 { background: linear-gradient(to right, var(--color3), var(--color4)); }
-.gradient-12 { background: linear-gradient(to right, var(--color4), var(--color1)); }
-.gradient-13 { background: linear-gradient(to right, var(--color1), var(--color2)); }
-.gradient-14 { background: linear-gradient(to right, var(--color2), var(--color3)); }
-.gradient-15 { background: linear-gradient(to right, var(--color3), var(--color4)); }
-.gradient-16 { background: linear-gradient(to right, var(--color4), var(--color1)); }
-.gradient-17 { background: linear-gradient(to right, var(--color1), var(--color2)); }
-.gradient-18 { background: linear-gradient(to right, var(--color2), var(--color3)); }
-.gradient-19 { background: linear-gradient(to right, var(--color3), var(--color4)); }
-.gradient-20 { background: linear-gradient(to right, var(--color4), var(--color1)); }
-.gradient-21 { background: linear-gradient(to right, var(--color1), var(--color2)); }
-.gradient-22 { background: linear-gradient(to right, var(--color2), var(--color3)); }
-.gradient-23 { background: linear-gradient(to right, var(--color3), var(--color4)); }
-.gradient-24 { background: linear-gradient(to right, var(--color4), var(--color1)); }
-.gradient-25 { background: linear-gradient(to right, var(--color1), var(--color2)); }
-.gradient-26 { background: linear-gradient(to right, var(--color2), var(--color3)); }
-.gradient-27 { background: linear-gradient(to right, var(--color3), var(--color4)); }
-.gradient-28 { background: linear-gradient(to right, var(--color4), var(--color1)); }
-.gradient-29 { background: linear-gradient(to right, var(--color1), var(--color2)); }
-.gradient-30 { background: linear-gradient(to right, var(--color2), var(--color3)); }
-.gradient-31 { background: linear-gradient(to right, var(--color3), var(--color4)); }
-.gradient-32 { background: linear-gradient(to right, var(--color4), var(--color1)); }
-.gradient-33 { background: linear-gradient(to right, var(--color1), var(--color2)); }
-.gradient-34 { background: linear-gradient(to right, var(--color2), var(--color3)); }
-.gradient-35 { background: linear-gradient(to right, var(--color3), var(--color4)); }
-.gradient-36 { background: linear-gradient(to right, var(--color4), var(--color1)); }
-.gradient-37 { background: linear-gradient(to right, var(--color1), var(--color2)); }
-.gradient-38 { background: linear-gradient(to right, var(--color2), var(--color3)); }
-.gradient-39 { background: linear-gradient(to right, var(--color3), var(--color4)); }
-.gradient-40 { background: linear-gradient(to right, var(--color4), var(--color1)); }
-.gradient-41 { background: linear-gradient(to right, var(--color1), var(--color2)); }
-.gradient-42 { background: linear-gradient(to right, var(--color2), var(--color3)); }
-.gradient-43 { background: linear-gradient(to right, var(--color3), var(--color4)); }
-.gradient-44 { background: linear-gradient(to right, var(--color4), var(--color1)); }
-.gradient-45 { background: linear-gradient(to right, var(--color1), var(--color2)); }
-.gradient-46 { background: linear-gradient(to right, var(--color2), var(--color3)); }
-.gradient-47 { background: linear-gradient(to right, var(--color3), var(--color4)); }
-.gradient-48 { background: linear-gradient(to right, var(--color4), var(--color1)); }
-.gradient-49 { background: linear-gradient(to right, var(--color1), var(--color2)); }
-.gradient-50 { background: linear-gradient(to right, var(--color2), var(--color3)); }
-.gradient-51 { background: linear-gradient(to right, var(--color3), var(--color4)); }
+
+
+.gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit; /* Hérite du fond de l'élément */
+    filter: blur(8px); /* Applique le flou uniquement à l'arrière-plan */
+    z-index: -1; /* Place l'élément avant le contenu */
+}
+
+#key-1 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-2 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-3 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-4 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-5 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-6 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-7 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-8 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-9 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-10 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-11 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-12 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-13 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-14 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-15 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-16 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-17 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-18 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-19 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-20 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-21 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-22 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-23 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-24 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-25 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-26 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-27 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-28 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-29 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-30 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-31 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-32 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-33 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-34 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-35 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-36 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-37 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-38 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-39 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-40 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-41 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-42 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-43 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-44 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-45 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-46 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-47 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-48 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-49 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-50 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+#key-51 { background: linear-gradient(to right, var(--color1), var(--color2)); }
+
