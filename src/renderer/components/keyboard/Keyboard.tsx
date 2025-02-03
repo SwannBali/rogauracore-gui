@@ -22,63 +22,62 @@ export default function Keyboard({
   return (
     <div className="keyboard">
       <div className="row">
-        <button className="key gradient-1" style={{ '--color1': color1, '--color2': color1 } as React.CSSProperties} />
-        <button className="key gradient-2" style={{ '--color2': color1, '--color3': color1 } as React.CSSProperties} />
-        <button className="key gradient-3" style={{ '--color3': color1, '--color4': color2 } as React.CSSProperties} />
-        <button className="key gradient-4" style={{ '--color4': color2, '--color1': color2 } as React.CSSProperties} />
-        <button className="key gradient-5" style={{ '--color1': color2, '--color2': color2 } as React.CSSProperties} />
-        <button className="key gradient-6" style={{ '--color2': color2, '--color3': color2 } as React.CSSProperties} />
-        <button className="key gradient-7" style={{ '--color3': color2, '--color4': color3 } as React.CSSProperties} />
-        <button className="key gradient-8" style={{ '--color4': color3, '--color1': color3 } as React.CSSProperties} />
-        <button className="key gradient-9" style={{ '--color1': color3, '--color2': color3 } as React.CSSProperties} />
-        <button className="key gradient-10" style={{ '--color2': color3, '--color3': color3 } as React.CSSProperties} />
-        <button className="key gradient-11" style={{ '--color3': color3, '--color4': color4 } as React.CSSProperties} />
-        <button className="key gradient-12" style={{ '--color4': color4, '--color1': color4 } as React.CSSProperties} />
-        <button className="key gradient-13" style={{ '--color1': color4, '--color2': color4 } as React.CSSProperties} />
-        <button className="key utility gradient-14" style={{ '--color2': color4, '--color3': color4 } as React.CSSProperties} />
+        <button className="key gradient" id="key-1" style={{ '--color1': color1, '--color2': color1 } as React.CSSProperties} />
+        <button className="key gradient" id="key-2" style={{ '--color1': color1, '--color2': color1 } as React.CSSProperties} />
+        <button className="key gradient" id="key-3" style={{ '--color1': color1, '--color2': color2 } as React.CSSProperties} />
+        <button className="key gradient" id="key-4" style={{ '--color1': color2, '--color2': color2 } as React.CSSProperties} />
+        <button className="key gradient" id="key-5" style={{ '--color1': color2, '--color2': color2 } as React.CSSProperties} />
+        <button className="key gradient" id="key-6" style={{ '--color1': color2, '--color2': color2 } as React.CSSProperties} />
+        <button className="key gradient" id="key-7" style={{ '--color1': color2, '--color2': color3 } as React.CSSProperties} />
+        <button className="key gradient" id="key-8" style={{ '--color1': color3, '--color2': color3 } as React.CSSProperties} />
+        <button className="key gradient" id="key-9" style={{ '--color1': color3, '--color2': color3 } as React.CSSProperties} />
+        <button className="key gradient" id="key-10" style={{ '--color1': color3, '--color2': color3 } as React.CSSProperties} />
+        <button className="key gradient" id="key-11" style={{ '--color1': color3, '--color2': color4 } as React.CSSProperties} />
+        <button className="key gradient" id="key-12" style={{ '--color1': color4, '--color2': color4 } as React.CSSProperties} />
+        <button className="key gradient" id="key-13" style={{ '--color1': color4, '--color2': color4 } as React.CSSProperties} />
+        <button className="key gradient" id="key-14" style={{ '--color1': color4, '--color2': color4 } as React.CSSProperties} />
       </div>
       <div className="row">
-        <button className="key utility gradient-15" style={{ '--color3': color1, '--color4': color1 } as React.CSSProperties} />
-        <button className="key gradient-16" style={{ '--color4': color1, '--color1': color1 } as React.CSSProperties} />
-        <button className="key gradient-17" style={{ '--color1': color1, '--color2': color2 } as React.CSSProperties} />
-        <button className="key gradient-18" style={{ '--color2': color2, '--color3': color2 } as React.CSSProperties} />
-        <button className="key gradient-19" style={{ '--color3': color2, '--color4': color2 } as React.CSSProperties} />
-        <button className="key gradient-20" style={{ '--color4': color2, '--color1': color2 } as React.CSSProperties} />
-        <button className="key gradient-21" style={{ '--color1': color2, '--color2': color3 } as React.CSSProperties} />
-        <button className="key gradient-22" style={{ '--color2': color3, '--color3': color3 } as React.CSSProperties} />
-        <button className="key gradient-23" style={{ '--color3': color3, '--color4': color3 } as React.CSSProperties} />
-        <button className="key gradient-24" style={{ '--color4': color3, '--color1': color3 } as React.CSSProperties} />
-        <button className="key gradient-25" style={{ '--color1': color3, '--color2': color4 } as React.CSSProperties} />
-        <button className="key gradient-26" style={{ '--color2': color4, '--color3': color4 } as React.CSSProperties} />
-        <button className="key gradient-27" style={{ '--color3': color4, '--color4': color4 } as React.CSSProperties} />
-        <button className="key gradient-28" style={{ '--color4': color4, '--color1': color4 } as React.CSSProperties} />
+        <button className="key utility gradient" id="key-15" style={{ '--color1': color1, '--color2': color1 } as React.CSSProperties} />
+        <button className="key gradient" id="key-16" style={{ '--color1': color1, '--color2': color1 } as React.CSSProperties} />
+        <button className="key gradient" id="key-17" style={{ '--color1': color1, '--color2': color2 } as React.CSSProperties} />
+        <button className="key gradient" id="key-18" style={{ '--color1': color2, '--color2': color2 } as React.CSSProperties} />
+        <button className="key gradient" id="key-19" style={{ '--color1': color2, '--color2': color2 } as React.CSSProperties} />
+        <button className="key gradient" id="key-20" style={{ '--color1': color2, '--color2': color2 } as React.CSSProperties} />
+        <button className="key gradient" id="key-21" style={{ '--color1': color2, '--color2': color3 } as React.CSSProperties} />
+        <button className="key gradient" id="key-22" style={{ '--color1': color3, '--color2': color3 } as React.CSSProperties} />
+        <button className="key gradient" id="key-23" style={{ '--color1': color3, '--color2': color3 } as React.CSSProperties} />
+        <button className="key gradient" id="key-24" style={{ '--color1': color3, '--color2': color3 } as React.CSSProperties} />
+        <button className="key gradient" id="key-25" style={{ '--color1': color3, '--color2': color4 } as React.CSSProperties} />
+        <button className="key gradient" id="key-26" style={{ '--color1': color4, '--color2': color4 } as React.CSSProperties} />
+        <button className="key gradient" id="key-27" style={{ '--color1': color4, '--color2': color4 } as React.CSSProperties} />
+        <button className="key gradient" id="key-28" style={{ '--color1': color4, '--color2': color4 } as React.CSSProperties} />
       </div>
       <div className="row">
-        <button className="key utility gradient-29" style={{ '--color1': color1, '--color2': color1 } as React.CSSProperties} />
-        <button className="key gradient-30" style={{ '--color2': color1, '--color3': color1 } as React.CSSProperties} />
-        <button className="key gradient-31" style={{ '--color3': color1, '--color4': color2 } as React.CSSProperties} />
-        <button className="key gradient-32" style={{ '--color4': color2, '--color1': color2 } as React.CSSProperties} />
-        <button className="key gradient-33" style={{ '--color1': color2, '--color2': color2 } as React.CSSProperties} />
-        <button className="key gradient-34" style={{ '--color2': color2, '--color3': color2 } as React.CSSProperties} />
-        <button className="key gradient-35" style={{ '--color3': color2, '--color4': color3 } as React.CSSProperties} />
-        <button className="key gradient-36" style={{ '--color4': color3, '--color1': color3 } as React.CSSProperties} />
-        <button className="key gradient-37" style={{ '--color1': color3, '--color2': color3 } as React.CSSProperties} />
-        <button className="key gradient-38" style={{ '--color2': color3, '--color3': color3 } as React.CSSProperties} />
-        <button className="key gradient-39" style={{ '--color3': color3, '--color4': color4 } as React.CSSProperties} />
-        <button className="key gradient-40" style={{ '--color4': color4, '--color1': color4 } as React.CSSProperties} />
-        <button className="key gradient-41" style={{ '--color1': color4, '--color2': color4 } as React.CSSProperties} />
-        <button className="key utility gradient-42" style={{ '--color2': color4, '--color3': color4 } as React.CSSProperties} />
+        <button className="key utility gradient" id="key-28" style={{ '--color1': color1, '--color2': color1 } as React.CSSProperties} />
+        <button className="key gradient" id="key-31" style={{ '--color1': color1, '--color2': color2 } as React.CSSProperties} />
+        <button className="key gradient" id="key-32" style={{ '--color1': color2, '--color2': color2 } as React.CSSProperties} />
+        <button className="key gradient" id="key-33" style={{ '--color1': color2, '--color2': color2 } as React.CSSProperties} />
+        <button className="key gradient" id="key-34" style={{ '--color1': color2, '--color2': color2 } as React.CSSProperties} />
+        <button className="key gradient" id="key-35" style={{ '--color1': color2, '--color2': color3 } as React.CSSProperties} />
+        <button className="key gradient" id="key-36"style={{ '--color1': color3, '--color2': color3 } as React.CSSProperties} />
+        <button className="key gradient" id="key-37" style={{ '--color1': color3, '--color2': color3 } as React.CSSProperties} />
+        <button className="key gradient" id="key-38" style={{ '--color1': color3, '--color2': color3 } as React.CSSProperties} />
+        <button className="key gradient" id="key-39" style={{ '--color1': color3, '--color2': color3 } as React.CSSProperties} />
+        <button className="key gradient" id="key-40" style={{ '--color1': color3, '--color2': color4 } as React.CSSProperties} />
+        <button className="key gradient" id="key-41" style={{ '--color1': color4, '--color2': color4 } as React.CSSProperties} />
+        <button className="key utility gradient" id="key-42" style={{ '--color1': color4, '--color2': color4 } as React.CSSProperties} />
       </div>
       <div className="row">
-        <button className="key utility gradient-43" style={{ '--color3': color1, '--color4': color1 } as React.CSSProperties} />
-        <button className="key gradient-44" style={{ '--color4': color1, '--color1': color1 } as React.CSSProperties} />
-        <button className="key gradient-45" style={{ '--color1': color1, '--color2': color2 } as React.CSSProperties} />
-        <button className="key gradient-46" style={{ '--color2': color2, '--color3': color2 } as React.CSSProperties} />
-        <button className="key key-space gradient-47" style={{ '--color3': color2, '--color4': color3 } as React.CSSProperties} />
-        <button className="key gradient-48" style={{ '--color4': color3, '--color1': color4 } as React.CSSProperties} />
-        <button className="key gradient-49" style={{ '--color1': color4, '--color2': color4 } as React.CSSProperties} />
-        <button className="key gradient-50" style={{ '--color2': color4, '--color3': color4 } as React.CSSProperties} />
-        <button className="key utility gradient-51" style={{ '--color3': color4, '--color4': color4 } as React.CSSProperties} />
+        <button className="key gradient" id="key-43" style={{ '--color1': color1, '--color2': color1 } as React.CSSProperties} />
+        <button className="key gradient" id="key-44" style={{ '--color1': color1, '--color2': color1 } as React.CSSProperties} />
+        <button className="key gradient" id="key-45" style={{ '--color1': color1, '--color2': color2 } as React.CSSProperties} />
+        <button className="key gradient" id="key-46" style={{ '--color1': color2, '--color2': color2 } as React.CSSProperties} />
+        <button className="key key-space gradient" id="key-47" style={{ '--color1': color2, '--color2': color3 } as React.CSSProperties} />
+        <button className="key gradient" id="key-48" style={{ '--color1': color3, '--color2': color4 } as React.CSSProperties} />
+        <button className="key gradient" id="key-49" style={{ '--color1': color4, '--color2': color4 } as React.CSSProperties} />
+        <button className="key gradient" id="key-50" style={{ '--color1': color4, '--color2': color4 } as React.CSSProperties} />
+        <button className="key gradient" id="key-51" style={{ '--color1': color4, '--color2': color4 } as React.CSSProperties} />
       </div>
     </div>
   );
