@@ -1,12 +1,22 @@
 @font-face {
-  font-family: 'ZebulonCondensedBold';
-  src: url('../../fonts/Zebulon_Condensed_Bold.otf') format('opentype');
+  font-family: 'ClashGrotesk-Variable';
+  src: url('../../fonts/ClashGrotesk-Variable.ttf') format('opentype');
   font-weight: bold;
   font-style: normal;
 }
 
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
 h1 {
-  font-family: 'ZebulonCondensedBold';
+  color: aliceblue;
+  font-family: 'ClashGrotesk-Variable';
   font-size: 3rem;
   margin: 0;
 }
@@ -35,14 +45,26 @@ button {
   opacity: 0.9;
 }
 
-.fixed-header {
-  text-align: center;
-  padding: 10px; /* Ajoutez du padding pour un meilleur espacement */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajoutez une ombre pour un effet visuel */
+.nav-bar-switch {
+  max-width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 50px;
 }
 
-span {
-  font-size: 1.5rem;
+
+.content {
+  width: 95%;
+}
+
+.nav-bar {
+  padding-top: 50px;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+
 }
 
 

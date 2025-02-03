@@ -7,8 +7,11 @@ import useDebounce from './hooks/useDebounce';
 import useChangeColorKeyboard from './hooks/useChangeColorKeyboard';
 import Keyboard from './components/keyboard/Keyboard';
 import { StoredData } from './types';
+import Switch from './components/switch/Switch';
+import Slider from './components/slider/Slider';
+import FilterTab from './components/FilterTab/FilterTab';
 
-function Hello() {
+function Main() {
   const [storedData, setStoredData] = useState<StoredData | null>(null);
   const [color, setColor] = useState('#1890ff');
   const [color1, setColor1] = useState('#1890ff');
@@ -68,18 +71,18 @@ function Hello() {
   }, []);
 
   return (
-    <div>
-      <div className="grid-container">
-        <div className="child" />
-        <div className="child span-5">
-          <h1 className="fixed-header">Rogauracore gui</h1>
+    <div className="content">
+      <div className="nav-bar">
+        <div>
+          <h1>ROGAURACORE gui</h1>
         </div>
-        <div className="child">
-          <button type="button" onClick={() => changeColor({ mode: 'OFF' })}>
-            Off
-          </button>
+        <div className="nav-bar-switch">
+          <Slider />
+          <Switch />
         </div>
       </div>
+
+      <FilterTab />
 
       <div className="main">
         <div className="sub-div1">
@@ -223,7 +226,7 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Hello />} />
+        <Route path="/" element={<Main />} />
       </Routes>
     </Router>
   );
